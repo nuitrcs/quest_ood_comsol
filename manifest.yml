@@ -1,0 +1,17 @@
+---
+name: COMSOL Multiphysics
+category: Interactive Apps
+subcategory: GUIs
+role: batch_connect
+description: |
+  This app will launch a [COMSOL Multiphysics] GUI on the [Quest cluster].
+  You will be able to interact with the COMSOL GUI through a VNC session.
+
+  Although we have three COMSOL modules on Quest, there use is restricted to certain groups.
+
+  * comsol/6.0_mse_emery : Researchers in Materials Science and Engineering who have been given approval to use this COMSOL installation on Quest by Professor Jonathan Daniel Emery.
+  * comsol/6.0_upgrade : Researchers in the Monica Olvera de la Cruz Lab who have been given approval.
+  * comsol/6.0 : Researchers in the Selim Shahriar Lab who have been given approval. 
+
+  [COMSOL Multiphysics]: https://www.comsol.com
+  [Quest cluster]: https://www.it.northwestern.edu/departments/it-services-support/research/computing/quest/index.html
