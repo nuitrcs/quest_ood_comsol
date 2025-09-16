@@ -9,7 +9,7 @@ description: |
 
   Although we have three COMSOL modules on Quest, there use is restricted to certain groups.
 
-  * comsol/6.0_mse_emery or comsol/6.2_mse_emery : Researchers in Materials Science and Engineering who have been given approval to use this COMSOL installation on Quest by Professor Jonathan Daniel Emery.
+  * comsol/6.0_mse_emery, comsol/6.2_mse_emery or comsol/6.3_mse_emery : Researchers in Materials Science and Engineering who have been given approval to use this COMSOL installation on Quest by Professor Jonathan Daniel Emery.
   * comsol/6.3_sun_lab : Researchers in the Cheng Sun Lab who have been given approval.
   * comsol/6.1_koch : Researchers in the Jens Koch Lab who have been given approval.
   * comsol/6.0_upgrade : Researchers in the Monica Olvera de la Cruz Lab who have been given approval.
