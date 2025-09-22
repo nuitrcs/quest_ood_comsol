@@ -62,4 +62,9 @@ module load <%= context.version %>
 # Launch COMSOL Multiphysics
 module list
 set -x
+<%- if context.comsol_mph_with_matlab == "1" %>
+module load matlab/r2023b
+comsol mphserver matlab -port $port
+<%- else %>
 comsol -3drend sw
+<%- end %>

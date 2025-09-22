@@ -1,2 +1,5 @@
 # Export the module function if it exists
 [[ $(type -t module) == "function" ]] && export -f module
+
+# Find available port to run comsol mphserver on
+port=$(find_port localhost 7000 11000 )

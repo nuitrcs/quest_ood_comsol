@@ -9,6 +9,8 @@ form:
   - version
   # determines the size of your desktop window
   - vnc_resolution
+  # This allows a user to decide if they want to run COMSOL MPH Server with MATLAB
+  - comsol_mph_with_matlab
   # This allows the user to select which partition they submit to
   - slurm_partition
   # This allows a user to request a GPU
@@ -73,6 +75,12 @@ attributes:
     value: "1280x1024"
     help: |
       The resolution setting (in pixels width x height) for the VNC connection.
+
+  comsol_mph_with_matlab:
+    widget: "check_box"
+    label: "Run MATLAB with COMSOL Multiphysics Server"
+    help: |
+      Run MATLAB with COMSOL Multiphysics Server
 
   bc_num_hours:
     label: "Wall Time (in number of hours)"
