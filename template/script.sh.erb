@@ -64,7 +64,12 @@ module list
 set -x
 <%- if context.comsol_mph_with_matlab == "1" %>
 module load matlab/r2023b
-comsol mphserver matlab -port $port
+comsol mphserver -np ${SLURM_NPROCS} -port $port -log "<%= session.staged_root.join("comsol.log") %>" &
+sleep 10
+export MATLABPATH=/gpfs/software/comsol/6.3_mse_emery/opt/mli:$MATLABPATH
+echo "mphstart('localhost', $port)" >> "<%= session.staged_root.join("startup.m") %>"
+cd "<%= session.staged_root %>"
+matlab -singleCompThread -desktop
 <%- else %>
 comsol -3drend sw
 <%- end %>
