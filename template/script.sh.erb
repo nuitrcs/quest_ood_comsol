@@ -66,9 +66,6 @@ module list
 
 set -x
 <%- if context.comsol_mph_with_matlab == "1" %>
-comsol mphserver -np ${SLURM_NPROCS} -port $port \
-  |& tee "<%= session.staged_root.join("comsol.log") %>"
-sleep 30
 matlab -singleCompThread -desktop
 <%- else %>
 set -x

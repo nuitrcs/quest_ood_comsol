@@ -3,3 +3,9 @@
 
 # Find available port to run comsol mphserver on
 port=$(find_port localhost 7000 11000 )
+
+<%- if context.comsol_mph_with_matlab == "1" %>
+module load <%= context.version %>
+comsol mphserver -np ${SLURM_NPROCS} -port $port \
+  | tee "<%= session.staged_root.join("comsol.log") %>" &
+<%- end %>
